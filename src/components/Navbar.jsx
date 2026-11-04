@@ -8,22 +8,34 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a className="transition-colors hover:text-accent-blue" href="/#About">
+          <a
+            className="transition-colors hover:text-accent-blue"
+            href="/#About"
+          >
             About
           </a>
         </li>
         <li>
-          <a className="transition-colors hover:text-accent-blue" href="/#Services">
+          <a
+            className="transition-colors hover:text-accent-blue"
+            href="/#Services"
+          >
             Services
           </a>
         </li>
-         <li>
-          <a className="transition-colors hover:text-accent-blue" href="/#Estimator">
+        <li>
+          <a
+            className="transition-colors hover:text-accent-blue"
+            href="/#Estimator"
+          >
             Calculator
           </a>
         </li>
         <li>
-          <a className="transition-colors hover:text-accent-blue" href="/#Contact">
+          <a
+            className="transition-colors hover:text-accent-blue"
+            href="/#Contact"
+          >
             Contact
           </a>
         </li>
