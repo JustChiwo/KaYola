@@ -9,7 +9,7 @@ function LoadingScreen() {
   useEffect(() => {
     if (!isMounted) return undefined;
 
-    const minimumVisibleDuration = 1500;
+    const minimumVisibleDuration = 500;
     const startedAt = Date.now();
     let hasFinished = false;
     let finishTimeoutId;
