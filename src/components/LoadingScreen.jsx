@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 
 function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(
+  const [isMounted, setIsMounted] = useState(
     () => document.readyState !== "complete",
   );
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    if (!isLoading) return undefined;
+    if (!isMounted) return undefined;
 
-    const finishLoading = () => setIsLoading(false);
-    const timeoutId = window.setTimeout(finishLoading, 3000);
+    let hasFinished = false;
+    let removeTimeoutId;
+    const finishLoading = () => {
+      if (hasFinished) return;
+      hasFinished = true;
+      setIsVisible(false);
+      removeTimeoutId = window.setTimeout(() => setIsMounted(false), 300);
+    };
+    const timeoutId = window.setTimeout(finishLoading, 2700);
 
     if (document.readyState === "complete") {
       finishLoading();
@@ -19,18 +27,22 @@ function LoadingScreen() {
 
     return () => {
       window.clearTimeout(timeoutId);
+      window.clearTimeout(removeTimeoutId);
       window.removeEventListener("load", finishLoading);
     };
-  }, [isLoading]);
+  }, [isMounted]);
 
-  if (!isLoading) return null;
+  if (!isMounted) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#080e1b] px-6"
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#080e1b] px-6 transition-opacity duration-300 ease-out motion-reduce:transition-none ${
+        isVisible ? "opacity-100" : "pointer-events-none opacity-0"
+      }`}
       role="status"
       aria-live="polite"
       aria-label="Loading K&Y Operations"
+      aria-hidden={!isVisible}
     >
       <div className="flex flex-col items-center text-center">
         <div className="relative mb-7 grid size-20 place-items-center">
