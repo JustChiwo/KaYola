@@ -11,7 +11,7 @@ function Hero() {
       <div className="relative z-10 mx-auto w-[min(1120px,calc(100%_-_48px))] max-sm:w-[min(560px,calc(100%_-_36px))]">
         <div className="relative z-10">
           <p className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.13em] text-accent-yellow before:h-px before:w-[23px] before:bg-current">
-            KaYola
+            K&amp;Y Operations
           </p>
           <h1 className="m-0 max-w-[720px] font-display text-[clamp(3rem,6vw,5.15rem)] font-extrabold leading-[1.03] tracking-[-0.075em] text-[#f5f7fd] max-[900px]:text-[clamp(2.75rem,6.5vw,4.5rem)] max-sm:text-[clamp(2.7rem,12vw,4rem)]">
             Reliable manufacturing

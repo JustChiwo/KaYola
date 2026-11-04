@@ -33,7 +33,7 @@ function Contact() {
       <div className="mx-auto grid w-[min(1120px,calc(100%_-_48px))] grid-cols-[0.8fr_1.2fr] items-start gap-[70px] max-[900px]:gap-[42px] max-sm:w-[min(560px,calc(100%_-_36px))] max-sm:grid-cols-1 max-sm:gap-9">
         <div>
           <p className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.13em] text-accent-yellow before:h-px before:w-[23px] before:bg-current">Let's talk</p>
-          <h2 className="m-0 max-w-[460px] font-display text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.12] tracking-[-0.055em] text-[#f7f9ff]">Get in touch with <span className="text-accent-blue">KaYola.</span></h2>
+          <h2 className="m-0 max-w-[460px] font-display text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.12] tracking-[-0.055em] text-[#f7f9ff]">Get in touch with <span className="text-accent-blue">K&amp;Y Operations.</span></h2>
           <p className="mt-[18px] max-w-[460px] text-[1.05rem] leading-7 text-[#a7b5ca]">
             Our team is available to discuss your staffing needs.
           </p>

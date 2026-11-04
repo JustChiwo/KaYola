@@ -4,10 +4,10 @@ function Footer() {
       <div className="mx-auto grid w-[min(1120px,calc(100%_-_48px))] grid-cols-[1fr_auto] gap-x-12 gap-y-8 py-10 max-sm:w-[min(560px,calc(100%_-_36px))] max-sm:grid-cols-1">
         <div>
           <a className="font-display text-lg font-extrabold tracking-tight text-[#f3f6ff] no-underline" href="#Home">
-            KaYola
+            K&amp;Y Operations
           </a>
           <p className="mb-0 mt-3 text-xs text-[#8496af]">
-            © {new Date().getFullYear()} KaYola. All rights reserved.
+            © {new Date().getFullYear()} K&amp;Y Operations. All rights reserved.
           </p>
         </div>
         <div className="flex flex-col items-start gap-2 max-sm:row-start-2">
