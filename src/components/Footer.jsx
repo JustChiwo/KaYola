@@ -1,16 +1,22 @@
 function Footer() {
   return (
-    <footer className="border-t border-blue-100/10 bg-[#060b14]/60">
-      <div className="mx-auto flex min-h-[90px] w-[min(1120px,calc(100%_-_48px))] items-center justify-between gap-5 max-sm:w-[min(560px,calc(100%_-_36px))] max-sm:flex-col max-sm:items-start max-sm:justify-center max-sm:py-[22px]">
-        <a className="flex items-center gap-3 no-underline" href="#Home" aria-label="K&Y Operations Group, back to top">
-          <span className="grid size-[41px] place-items-center rounded-xl bg-accent-yellow font-display text-sm font-extrabold text-[#142033]">K&amp;Y</span>
-          <span className="flex flex-col gap-[3px]">
-            <strong className="font-display text-sm text-[#eaf1fd]">K&amp;Y Operations Group</strong>
-            <small className="text-[0.63rem] uppercase tracking-[0.06em] text-[#8fa2bc]">Manufacturing workforce solutions</small>
-          </span>
-        </a>
-        <span className="text-xs text-[#8496af] max-sm:order-1">Workforce capacity, built around your operation.</span>
-        <a className="text-xs text-[#c4d2e5] no-underline" href="#Home">Back to top <span className="ml-1 text-accent-yellow" aria-hidden="true">↑</span></a>
+    <footer className="border-t border-blue-100/10 bg-gradient-to-b from-[#0b1423] to-[#060b14]">
+      <div className="mx-auto grid w-[min(1120px,calc(100%_-_48px))] grid-cols-[1fr_auto] gap-x-12 gap-y-8 py-10 max-sm:w-[min(560px,calc(100%_-_36px))] max-sm:grid-cols-1">
+        <div>
+          <a className="font-display text-lg font-extrabold tracking-tight text-[#f3f6ff] no-underline" href="#Home">
+            KaYola
+          </a>
+          <p className="mb-0 mt-3 text-xs text-[#8496af]">
+            © {new Date().getFullYear()} KaYola. All rights reserved.
+          </p>
+        </div>
+        <div className="flex flex-col items-start gap-2 max-sm:row-start-2">
+          <h2 className="mb-1 mt-0 font-display text-sm font-bold text-[#eaf1fd]">Contact</h2>
+          <a className="text-sm text-[#aebdd2] no-underline transition hover:text-accent-blue" href="tel:+27612694185">061 269 4185</a>
+          <a className="text-sm text-[#aebdd2] no-underline transition hover:text-accent-blue" href="tel:+27717209253">071 720 9253</a>
+          <a className="text-sm text-[#aebdd2] no-underline transition hover:text-accent-blue" href="mailto:kyoperationsgroup@gmail.com">kyoperationsgroup@gmail.com</a>
+        </div>
+       
       </div>
     </footer>
   )
