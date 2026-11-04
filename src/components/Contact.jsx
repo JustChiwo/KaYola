@@ -84,7 +84,6 @@ function Contact() {
           </div>
           <button className="mt-5 inline-flex min-h-[52px] w-full cursor-pointer items-center justify-center gap-2.5 rounded-[14px] border-0 bg-accent-yellow px-6 font-bold text-[#111827] shadow-[0_9px_28px_rgba(255,196,61,0.17)] transition hover:-translate-y-0.5 hover:bg-[#ffd15f]" type="submit">
             {submitted ? 'Your email app should open now' : 'Send workforce request'}
-            <span aria-hidden="true">↗</span>
           </button>
           <p className="mb-0 mt-3 text-center text-xs text-[#8799b2]">Your request will be prepared in your device&apos;s email app.</p>
         </form>

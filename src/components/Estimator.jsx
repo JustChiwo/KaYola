@@ -43,7 +43,7 @@ function Estimator() {
             <small className="mt-0.5 text-xs text-[#94a8c4]">Based on 40 hours per worker / week</small>
           </div>
           <a className="mt-[18px] inline-flex min-h-[52px] w-full items-center justify-center gap-2.5 rounded-[14px] bg-accent-yellow px-6 font-bold text-[#111827] shadow-[0_9px_28px_rgba(255,196,61,0.17)] transition hover:bg-[#ffd15f]" href="#Contact">
-            Discuss your requirements <span aria-hidden="true">↗</span>
+            Discuss your requirements
           </a>
         </div>
       </div>

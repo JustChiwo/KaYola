@@ -1,20 +1,17 @@
 const services = [
   {
-    number: '01',
     title: 'Manufacturing subcontracting',
     description:
       'Put additional hands on the floor to help meet production needs and keep work moving.',
     tag: 'Production support',
   },
   {
-    number: '02',
     title: 'Workforce solutions',
     description:
       'Scale your deployed workforce to suit your project, shift requirements, and timeline.',
     tag: 'Flexible capacity',
   },
   {
-    number: '03',
     title: 'Payroll & compliance',
     description:
       'Keep the workforce on our payroll and under our compliance management.',
@@ -38,11 +35,7 @@ function Services() {
         </div>
         <div className="mt-[46px] grid grid-cols-3 gap-4 max-sm:grid-cols-1">
           {services.map((service) => (
-            <article className="min-h-[265px] rounded-[20px] border border-white/10 bg-gradient-to-br from-[#21324d]/70 to-[#0f192b]/70 p-[26px] shadow-[0_24px_70px_rgba(0,0,0,0.18),inset_0_1px_rgba(255,255,255,0.08)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-accent-blue/35 max-sm:min-h-[230px]" key={service.number}>
-              <div className="flex items-center justify-between">
-                <span className="font-display text-xs font-bold tracking-[0.09em] text-[#7d91ad]">{service.number}</span>
-                <span className="text-accent-yellow" aria-hidden="true">↗</span>
-              </div>
+            <article className="min-h-[265px] rounded-[20px] border border-white/10 bg-gradient-to-br from-[#21324d]/70 to-[#0f192b]/70 p-[26px] shadow-[0_24px_70px_rgba(0,0,0,0.18),inset_0_1px_rgba(255,255,255,0.08)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-accent-blue/35 max-sm:min-h-[230px]" key={service.title}>
               <h3 className="mb-2 mt-[34px] max-w-[260px] font-display text-xl font-bold tracking-tight text-[#eaf1fd]">{service.title}</h3>
               <p className="m-0 max-w-[310px] text-[0.91rem] leading-relaxed text-[#a9b8cc]">{service.description}</p>
               <span className="mt-5 inline-flex rounded-lg border border-accent-blue/20 bg-blue-400/7 px-2.5 py-1.5 text-xs font-semibold text-[#acd0f7]">{service.tag}</span>
@@ -55,7 +48,7 @@ function Services() {
             <span className="text-xs text-[#a6b6cc]">The K&amp;Y difference</span>
             <h3 className="m-0 mt-1 font-display text-lg font-bold text-[#edf3fd]">More capacity. Less direct HR liability.</h3>
           </div>
-          <a className="inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-[14px] border border-white/15 bg-white/[0.045] px-6 font-bold text-blue-50 transition hover:bg-white/[0.09] max-sm:w-full" href="#Contact">Talk to our team <span aria-hidden="true">↗</span></a>
+          <a className="inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-[14px] border border-white/15 bg-white/[0.045] px-6 font-bold text-blue-50 transition hover:bg-white/[0.09] max-sm:w-full" href="#Contact">Talk to our team</a>
         </div>
       </div>
     </section>
