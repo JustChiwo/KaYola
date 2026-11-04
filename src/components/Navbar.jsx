@@ -18,7 +18,7 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a className="transition-colors hover:text-accent-blue" href="/contact">
+          <a className="transition-colors hover:text-accent-blue" href="/#Contact">
             Contact
           </a>
         </li>

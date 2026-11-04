@@ -13,13 +13,8 @@ function Estimator() {
           <p className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.13em] text-accent-yellow before:h-px before:w-[23px] before:bg-current">Plan your capacity</p>
           <h2 className="m-0 max-w-[480px] font-display text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.12] tracking-[-0.055em] text-[#f7f9ff]">See the hours your <span className="text-accent-blue">team can deliver.</span></h2>
           <p className="mt-[18px] max-w-[440px] text-[1.05rem] leading-7 text-[#a7b5ca]">
-            Get a quick weekly estimate based on a standard 40-hour work week per
-            deployed employee.
+            Estimate weekly hours using a standard 40-hour work week per worker.
           </p>
-          <div className="mt-8 flex items-start gap-3 text-sm leading-relaxed text-[#9eafc6]">
-            <span className="grid size-[21px] shrink-0 place-items-center rounded-full border border-accent-blue/40 text-xs font-bold text-accent-blue" aria-hidden="true">i</span>
-            Use the slider to explore your potential weekly workforce capacity.
-          </div>
         </div>
         <div className="rounded-[22px] border border-white/10 bg-gradient-to-br from-[#21324d]/70 to-[#0f192b]/70 p-[31px] shadow-[0_24px_70px_rgba(0,0,0,0.18),inset_0_1px_rgba(255,255,255,0.08)] backdrop-blur-xl max-sm:p-[22px]">
           <label className="flex items-baseline justify-between gap-3 text-sm text-[#c6d3e6]" htmlFor="worker-count">
@@ -40,7 +35,6 @@ function Estimator() {
           <div className="mt-7 flex min-h-[170px] flex-col items-center justify-center rounded-2xl border border-blue-200/15 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(61,137,220,0.2),transparent_70%),rgba(8,15,28,0.65)] text-center">
             <span className="text-xs uppercase tracking-[0.08em] text-[#a9c5e7]">Total weekly output hours</span>
             <strong className="mt-1 font-display text-[clamp(2.4rem,5vw,3.4rem)] font-extrabold tracking-[-0.06em] text-accent-yellow">{weeklyHours.toLocaleString()} <span className="text-[0.58em] tracking-tight">hours</span></strong>
-            <small className="mt-0.5 text-xs text-[#94a8c4]">Based on 40 hours per worker / week</small>
           </div>
           <a className="mt-[18px] inline-flex min-h-[52px] w-full items-center justify-center gap-2.5 rounded-[14px] bg-accent-yellow px-6 font-bold text-[#111827] shadow-[0_9px_28px_rgba(255,196,61,0.17)] transition hover:bg-[#ffd15f]" href="#Contact">
             Discuss your requirements
