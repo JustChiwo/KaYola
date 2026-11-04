@@ -9,13 +9,32 @@ function LoadingScreen() {
   useEffect(() => {
     if (!isMounted) return undefined;
 
+    const minimumVisibleDuration = 1500;
+    const startedAt = Date.now();
     let hasFinished = false;
+    let finishTimeoutId;
     let removeTimeoutId;
-    const finishLoading = () => {
+    const completeLoading = () => {
       if (hasFinished) return;
       hasFinished = true;
+      window.clearTimeout(finishTimeoutId);
       setIsVisible(false);
       removeTimeoutId = window.setTimeout(() => setIsMounted(false), 300);
+    };
+    const finishLoading = () => {
+      if (hasFinished || finishTimeoutId !== undefined) return;
+
+      const remainingDuration =
+        minimumVisibleDuration - (Date.now() - startedAt);
+      if (remainingDuration > 0) {
+        finishTimeoutId = window.setTimeout(
+          completeLoading,
+          remainingDuration,
+        );
+        return;
+      }
+
+      completeLoading();
     };
     const timeoutId = window.setTimeout(finishLoading, 2700);
 
@@ -27,6 +46,7 @@ function LoadingScreen() {
 
     return () => {
       window.clearTimeout(timeoutId);
+      window.clearTimeout(finishTimeoutId);
       window.clearTimeout(removeTimeoutId);
       window.removeEventListener("load", finishLoading);
     };
@@ -41,20 +61,15 @@ function LoadingScreen() {
       }`}
       role="status"
       aria-live="polite"
-      aria-label="Loading K&Y Operations"
+      aria-label="Loading"
       aria-hidden={!isVisible}
     >
       <div className="flex flex-col items-center text-center">
         <div className="relative mb-7 grid size-20 place-items-center">
           <div className="absolute inset-0 rounded-full border border-blue-200/10" />
           <div className="absolute inset-0 animate-spin rounded-full border-2 border-transparent border-t-accent-blue motion-reduce:animate-none" />
-          <span className="font-display text-lg font-extrabold tracking-tight text-accent-yellow">
-            K&amp;Y
-          </span>
+          <img className="size-12" src="/logo.svg" alt="" />
         </div>
-        <p className="m-0 font-display text-lg font-bold text-[#f3f6ff]">
-          K&amp;Y Operations
-        </p>
         <p className="mb-0 mt-2 text-sm text-[#9eafc6]">
           Preparing the website...{" "}
         </p>
