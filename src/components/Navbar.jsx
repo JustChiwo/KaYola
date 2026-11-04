@@ -17,6 +17,11 @@ function Navbar() {
             Services
           </a>
         </li>
+         <li>
+          <a className="transition-colors hover:text-accent-blue" href="/#Estimator">
+            Calculator
+          </a>
+        </li>
         <li>
           <a className="transition-colors hover:text-accent-blue" href="/#Contact">
             Contact
